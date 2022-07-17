@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Invisible Wall
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Dice
   - 
   - 
   - 
@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1858912721
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Entity
+    uniqueID: 122571429
+    locked: 0
+  - name: Dice
+    uniqueID: 2186597083
+    locked: 0
+  - name: Foreground
+    uniqueID: 22601919
     locked: 0
