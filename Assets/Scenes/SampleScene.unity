@@ -1731,7 +1731,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 993875207}
         m_TargetAssemblyTypeName: Core.Shopping.Shop, Assembly-CSharp
-        m_MethodName: TryBuy
+        m_MethodName: Subtract
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 5aa0e376ed505a54bbb56c7e6c941272, type: 2}
@@ -1768,6 +1768,42 @@ MonoBehaviour:
       - m_Target: {fileID: 483373516}
         m_TargetAssemblyTypeName: Core.SoundPlayer, Assembly-CSharp
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1368841440}
+        m_TargetAssemblyTypeName: Core.Shopping.Access, Assembly-CSharp
+        m_MethodName: CheckAccess
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1335255334}
+        m_TargetAssemblyTypeName: Core.Shopping.Access, Assembly-CSharp
+        m_MethodName: CheckAccess
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1987436345}
+        m_TargetAssemblyTypeName: Core.Shopping.Access, Assembly-CSharp
+        m_MethodName: CheckAccess
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3293,6 +3329,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 993875207}
+        m_TargetAssemblyTypeName: Core.Shopping.Shop, Assembly-CSharp
+        m_MethodName: CheckOpportunity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &845015513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4199,7 +4247,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 993875207}
         m_TargetAssemblyTypeName: Core.Shopping.Shop, Assembly-CSharp
-        m_MethodName: TryBuy
+        m_MethodName: Subtract
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 6dab60cb90d9edd429c34bebaf9c69fe, type: 2}
@@ -4236,6 +4284,42 @@ MonoBehaviour:
       - m_Target: {fileID: 483373516}
         m_TargetAssemblyTypeName: Core.SoundPlayer, Assembly-CSharp
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1368841440}
+        m_TargetAssemblyTypeName: Core.Shopping.Access, Assembly-CSharp
+        m_MethodName: CheckAccess
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1335255334}
+        m_TargetAssemblyTypeName: Core.Shopping.Access, Assembly-CSharp
+        m_MethodName: CheckAccess
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1987436345}
+        m_TargetAssemblyTypeName: Core.Shopping.Access, Assembly-CSharp
+        m_MethodName: CheckAccess
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4764,6 +4848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335255332}
   - component: {fileID: 1335255333}
+  - component: {fileID: 1335255334}
   m_Layer: 5
   m_Name: ShopItem (+Damage)
   m_TagString: Untagged
@@ -4808,13 +4893,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shopItem: {fileID: 11400000, guid: 6dab60cb90d9edd429c34bebaf9c69fe, type: 2}
-  _buyButton: {fileID: 1145398729}
+  _access: {fileID: 1335255334}
   _visual: {fileID: 1145398730}
   _name: {fileID: 390238355}
   _costText: {fileID: 1074418434}
   _sold: {fileID: 1434302024}
-  _allowedToBuySameItemCount: 1
   _coinEmojiTag: <sprite=0>
+--- !u!114 &1335255334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335255331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2804ecbf7456f4fb8a6d36205da54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopItem: {fileID: 11400000, guid: 6dab60cb90d9edd429c34bebaf9c69fe, type: 2}
+  _currency: {fileID: 1275871324}
+  _buyButton: {fileID: 1145398729}
+  _allowedToBuySameItemCount: 1
 --- !u!1 &1363466974
 GameObject:
   m_ObjectHideFlags: 0
@@ -4900,7 +5000,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 993875207}
         m_TargetAssemblyTypeName: Core.Shopping.Shop, Assembly-CSharp
-        m_MethodName: TryBuy
+        m_MethodName: Subtract
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 4650594907e51f540bab6a902a817fe4, type: 2}
@@ -4937,6 +5037,42 @@ MonoBehaviour:
       - m_Target: {fileID: 483373516}
         m_TargetAssemblyTypeName: Core.SoundPlayer, Assembly-CSharp
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1368841440}
+        m_TargetAssemblyTypeName: Core.Shopping.Access, Assembly-CSharp
+        m_MethodName: CheckAccess
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1335255334}
+        m_TargetAssemblyTypeName: Core.Shopping.Access, Assembly-CSharp
+        m_MethodName: CheckAccess
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1987436345}
+        m_TargetAssemblyTypeName: Core.Shopping.Access, Assembly-CSharp
+        m_MethodName: CheckAccess
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4994,6 +5130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1368841438}
   - component: {fileID: 1368841439}
+  - component: {fileID: 1368841440}
   m_Layer: 5
   m_Name: ShopItem (+1 Heart)
   m_TagString: Untagged
@@ -5038,13 +5175,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shopItem: {fileID: 11400000, guid: 4650594907e51f540bab6a902a817fe4, type: 2}
-  _buyButton: {fileID: 1363466976}
+  _access: {fileID: 1368841440}
   _visual: {fileID: 1363466977}
   _name: {fileID: 1533868218}
   _costText: {fileID: 68785381}
   _sold: {fileID: 2046866470}
-  _allowedToBuySameItemCount: 2
   _coinEmojiTag: <sprite=0>
+--- !u!114 &1368841440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368841437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2804ecbf7456f4fb8a6d36205da54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopItem: {fileID: 11400000, guid: 4650594907e51f540bab6a902a817fe4, type: 2}
+  _currency: {fileID: 1275871324}
+  _buyButton: {fileID: 1363466976}
+  _allowedToBuySameItemCount: 3
 --- !u!1 &1434302022
 GameObject:
   m_ObjectHideFlags: 0
@@ -6400,6 +6552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987436343}
   - component: {fileID: 1987436344}
+  - component: {fileID: 1987436345}
   m_Layer: 5
   m_Name: ShopItem (+Fire rate)
   m_TagString: Untagged
@@ -6444,13 +6597,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shopItem: {fileID: 11400000, guid: 5aa0e376ed505a54bbb56c7e6c941272, type: 2}
-  _buyButton: {fileID: 396520757}
+  _access: {fileID: 1987436345}
   _visual: {fileID: 396520758}
   _name: {fileID: 798988645}
   _costText: {fileID: 349455269}
   _sold: {fileID: 450212679}
-  _allowedToBuySameItemCount: 5
   _coinEmojiTag: <sprite=0>
+--- !u!114 &1987436345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987436342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2804ecbf7456f4fb8a6d36205da54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopItem: {fileID: 11400000, guid: 5aa0e376ed505a54bbb56c7e6c941272, type: 2}
+  _currency: {fileID: 1275871324}
+  _buyButton: {fileID: 396520757}
+  _allowedToBuySameItemCount: 5
 --- !u!1 &2011180751
 GameObject:
   m_ObjectHideFlags: 0

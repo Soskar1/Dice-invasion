@@ -7,14 +7,12 @@ namespace Core.Shopping
     public class ShopItemDisplay : MonoBehaviour
     {
         [SerializeField] private ShopItem _shopItem;
-        [SerializeField] private Button _buyButton;
+        [SerializeField] private Access _access;
         [SerializeField] private Image _visual;
 
         [SerializeField] private TextMeshProUGUI _name;
         [SerializeField] private TextMeshProUGUI _costText;
         [SerializeField] private TextMeshProUGUI _sold;
-
-        [SerializeField] private int _allowedToBuySameItemCount;
 
         [SerializeField] private string _coinEmojiTag = "<sprite=0>";
 
@@ -29,11 +27,10 @@ namespace Core.Shopping
 
         public void RefreshCostText()
         {
-            if (_shopItem.purchasedTimes >= _allowedToBuySameItemCount)
+            if (_shopItem.purchasedTimes >= _access.AllowedToBuySameItemCount)
             {
                 _costText.gameObject.SetActive(false);
                 _sold.gameObject.SetActive(true);
-                _buyButton.interactable = false;
                 return;
             }
 
